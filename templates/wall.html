@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<style>
+	.container-fluid{
+		padding: 50px;
+	}
+	#dojo{
+		text-align: left	
+	}
+	#dojo_header{
+		border: solid thin grey;
+		display: 
+	}
+	#message_button{
+	margin-left: 1133px;
+	margin-top: 0px;
+	}
+	</style>
+<title>forms</title>
+</head>
+
+<body>
+<div id ="dojo_header">
+  <h3 id="dojo">Coding Dojo Wall</h3>
+  <p> Welcome {{name}}</p>
+  <a href="#">log off</a>
+ </div>
+<div class="container-fluid">
+	
+	{% for message in messages %}
+	print {{message}}
+	<!-- <form action='/wall/messages' method="POST">
+		<div class="form-group" name="messagsse">
+		<label for="exampleTextarea" name="message">Post a message</label>
+		<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+		<button type="submit" input ="sumbit" class="btn btn-primary mt-2" id ="message_button">post a message</button>
+		</div>
+	</form>  -->
+	{%endfor%}
+
+<!-- <form action='/wall/messages' method="POST">
+	<div class="form-group" name="messagsse">
+    <label for="exampleTextarea" name="message">Post a message</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    <button type="submit" input ="sumbit" class="btn btn-primary mt-2" id ="message_button">post a message</button>
+	</div>
+</form> -->
+ 
+</div>
+</body>
+</html>
